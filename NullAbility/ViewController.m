@@ -14,9 +14,23 @@
 
 @implementation ViewController
 
+-(int)sum:(NSNumber*)numA :(NSNumber*)numB{
+    int theSum = numA.intValue + numB.intValue;
+    return theSum;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSNumber *num1;
+    NSNumber *num2;
+    if(num1 && num2){
+        int sum = [self sum:num1 :num2];
+        NSLog(@"Sum: %d",sum);
+    }else{
+        NSLog(@"There is NULL");
+    }
+   
+    
 }
 
 
